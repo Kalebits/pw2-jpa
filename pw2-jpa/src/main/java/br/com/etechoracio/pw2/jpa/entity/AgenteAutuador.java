@@ -1,4 +1,6 @@
-package br.com.etechoracio.jpa.enums;
+package br.com.etechoracio.pw2.jpa.entity;
+
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +10,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import br.com.etechoracio.jpa.enums.StatusAgenteEnum;
+import br.com.etechoracio.jpa.enums.TipoAgenteEnum;
 
 @Entity
 @Table
@@ -29,7 +34,7 @@ public class AgenteAutuador {
 	private TipoAgenteEnum tipo;
 	
 	@Column(name = "ST_AGENTE")
-	@Enumerated(EnumType.STRING)
+	@Enumerated(EnumType.ORDINAL)
 	private StatusAgenteEnum status;
 	
 	
