@@ -15,7 +15,7 @@ import br.com.etechoracio.jpa.enums.StatusAgenteEnum;
 import br.com.etechoracio.jpa.enums.TipoAgenteEnum;
 
 @Entity
-@Table
+@Table(name= "TBL_AGENTE_AUTUADOR")
 public class AgenteAutuador {
 
 	@Id

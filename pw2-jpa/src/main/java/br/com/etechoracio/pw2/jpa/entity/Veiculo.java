@@ -27,8 +27,14 @@ public class Veiculo {
 	
 	@Column(name = "TX_MODELO")
 	private String modelo;
+	
+	@Column(name = "NR_ANO_FABRICACAO")
 	private Integer anoFabricacao;
+	
+	@Column(name = "NR_ANO_MODELO")
 	private Integer anoModelo;
+	
+	@Column(name = "VLR_PRECO")
 	private Double valor;
 	
 }
