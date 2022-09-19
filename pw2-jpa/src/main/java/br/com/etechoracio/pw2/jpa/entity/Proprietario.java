@@ -2,6 +2,7 @@ package br.com.etechoracio.pw2.jpa.entity;
 
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
@@ -9,11 +10,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import br.com.etechoracio.jpa.enums.TipoPessoaEnum;
 import lombok.Getter;
 import lombok.Setter;
-
+@Getter
+@Setter
+@Entity
+@Table(name= "TBL_PROPRIETARIO")
 public class Proprietario {
 	
 	@Id
@@ -33,6 +38,6 @@ public class Proprietario {
 	
 	@OneToOne
 	@JoinColumn(name = "ID_TELEFONE")
-	private String telefone;
+	private Telefone telefone;
 	
 }
